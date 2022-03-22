@@ -13,4 +13,4 @@ app.get("/*", (req, res) => {
 
 
 
-app.listen(process.env.PORT || 5075, () => console.log("Server działa..."));
+//app.listen(process.env.PORT || 5075, () => console.log("Server działa..."));
