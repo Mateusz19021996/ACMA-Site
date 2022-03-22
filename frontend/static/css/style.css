@@ -1,0 +1,11 @@
+body{
+    font-family: 'QuickSand', sans-serif;
+    font-size: 20px;
+}
+
+.navbarek{
+    font-size: large;
+    top: 0;
+    left: 0;
+    background: rgb(111, 153, 125);
+}
