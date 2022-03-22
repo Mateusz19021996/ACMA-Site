@@ -1,6 +1,6 @@
 import abstractView from "./AbstractView.js";
 
-export default class extends abstractView {
+export default class About extends abstractView {
 
     constructor(){
         super();

@@ -1,4 +1,4 @@
-export default class {            
+export default class AbstractView {            
 
     // constructor(_htmlPath) {
     //     this.htmlPath = _htmlPath;
