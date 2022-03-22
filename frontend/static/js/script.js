@@ -1,5 +1,5 @@
-import home from "./frontend/static/js/views/Home";
-import about from "./frontend/static/js/views/About"
+import home from "./views/Home.js";
+import about from "./views/About.js";
 
 console.log('this is mój js')
 
