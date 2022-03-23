@@ -1,11 +1,96 @@
-body{
-    font-family: 'QuickSand', sans-serif;
-    font-size: 20px;
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #11245A;
+ }
+
+ .logo-text {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #11245A !important;
+ }
+
+.navbar{
+    background-color: rgb(245, 169, 7);
+    border-bottom: 3px solid rgba(0,0,0,0.1);
 }
 
-.navbarek{
-    font-size: large;
-    top: 0;
-    left: 0;
-    background: rgb(111, 153, 125);
+.navbar .nav-link{
+    font-size:15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: aqua;    
 }
+
+.navbar-light .navbar-nav .nav-link.active{
+    background-color: blue; 
+    color: chartreuse;   
+}
+
+/* .navbar .nav-link.active :hover{
+    background-color: blue;
+    color: red;
+} */
+
+.homeeee{    
+    background: linear-gradient(rgba(118, 52, 0, 0.7), rgba(118, 52, 0, 0.7)),
+    url(../images/fotka2.jfif);
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+
+}
+
+.homeeee h1,h2,h3,h4,p {
+    color:white;
+}
+
+.homeeee h4 {
+    color:white;
+}
+
+.homeeee p {
+    color:white;
+}
+
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-intro .hline{
+    width:70px;
+    height:2px;
+    background-color: red;
+    margin: 16px auto 0 auto;
+}
+
+.offersss h1,h2,h3,h4,p{
+    color: black;
+    letter-spacing: 2px;
+}
+
+.icon-box{
+    width: 60px;
+    height: 60px;
+    border: 3px solid;
+    background-color: rgb(245, 169, 7);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.test{
+    border: 5px solid black;
+}
+
+
