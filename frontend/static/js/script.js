@@ -4,12 +4,14 @@ import about from "./views/About.js";
 
 console.log('this is mój js')
 
+//this function saves url to history when its called
 const navigateTo = url => {
     history.pushState(null, null, url);
     router();
 }
 
-
+//this method contains paths > check if location.pathname is one of this paths
+//if yes => let match exist if no => go to route[0]
 const router = async() => {
     const routes = [
         {path: "/", view: home },
@@ -47,14 +49,19 @@ const router = async() => {
     document.querySelector('#spaApp').innerHTML = await view.getHTML();
 };
 
-//window - supported by all browsers, it represents browser window +DLACZEGO TU JEST ROUTER A NIE ROUTER()+
+//window - supported by all browsers, it represents browser window 
+//+DLACZEGO TU JEST ROUTER A NIE ROUTER()+
+//popstate event - kiedy zmienia się historia windowsa (browsera) wowołaj router
 window.addEventListener("popstate", router);
 
+
+//once page(DOMContentLoaded) will be loaded => call this function ()=>
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.addEventListener("click", e => {
-        if(e.target.matches("[data-link]")){
-            e.preventDefault();
-            navigateTo(e.target.href)
+    document.body.addEventListener("click", e => {          //if we click 
+        if(e.target.matches("[data-link]")){                //and target of our click matchs[data-link]
+            e.preventDefault();                             //don't make default refresh
+            navigateTo(e.target.href)                       //execute function, which literraly save href to history and execute route method
+            console.log('test clickniecia');        
         }
     })
     router();
