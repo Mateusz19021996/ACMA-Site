@@ -1,3 +1,9 @@
+:root {
+  --oragne: rgb(245, 169, 7);
+  --oragne-light: rgb(250, 177, 20);
+  --brown: rgb(118, 52, 0);
+}
+
 h1,
 h2,
 h3,
@@ -8,6 +14,11 @@ h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #11245a;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-text {
@@ -23,15 +34,15 @@ h6 {
 }
 
 .navbar .nav-link {
-  font-size: 15px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: aqua;
+  background-color: var(--oragne);
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  background-color: blue;
-  color: chartreuse;
+  color: white;
+  background-color: var(--oragne-light);
 }
 
 /* .navbar .nav-link.active :hover{
@@ -39,7 +50,7 @@ h6 {
     color: red;
 } */
 
-.homeeee {
+#home {
   background: linear-gradient(rgba(118, 52, 0, 0.7), rgba(118, 52, 0, 0.7)),
     url(../images/fotka2.jfif);
   min-height: 50vh;
@@ -50,7 +61,7 @@ h6 {
   margin-bottom: 80px;
 }
 
-.homeeee h1,
+#home h1,
 h2,
 h3,
 h4,
@@ -58,11 +69,11 @@ p {
   color: white;
 }
 
-.homeeee h4 {
+#home h4 {
   color: white;
 }
 
-.homeeee p {
+#home p {
   color: white;
 }
 
@@ -78,7 +89,7 @@ p {
   margin: 16px auto 0 auto;
 }
 
-.offersss h1,
+#offers h1,
 h2,
 h3,
 h4,
@@ -105,6 +116,8 @@ p {
 }
 
 .portfolio-item {
+  width: auto;
+  height: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -125,7 +138,8 @@ p {
   display: flex;
   align-items: flex-end;
   padding: 30px;
-  opacity: 0;
+  /* widoczność overlay na porfolio item */
+  opacity: 0.7;
 }
 
 .portfolio-overlay h3,
@@ -133,10 +147,54 @@ p {
   color: rgb(118, 52, 0);
 }
 
+/* widoczność po najechaniu */
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
 
 .portfolio-item:hover img {
   transform: scale(1.1);
+}
+
+body {
+  position: relative;
+}
+
+footer {
+  background-color: var(--oragne-light);
+  border-top: 1.3px solid black;
+  padding: 20px;
+}
+
+footer .footer-links a,
+footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+footer .footer-links a:hover,
+footer .social-icons a:hover {
+  color: goldenrod;
+}
+
+footer .social-icons {
+  font-size: 25px;
+}
+
+.footer-top {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid var(--brown);
+}
+
+footer .footer-links a {
+  display: block;
+  font-weight: 400;
 }
