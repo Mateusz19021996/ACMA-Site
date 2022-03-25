@@ -1,11 +1,200 @@
-body{
-    font-family: 'QuickSand', sans-serif;
-    font-size: 20px;
+:root {
+  --oragne: rgb(245, 169, 7);
+  --oragne-light: rgb(250, 177, 20);
+  --brown: rgb(118, 52, 0);
 }
 
-.navbarek{
-    font-size: large;
-    top: 0;
-    left: 0;
-    background: rgb(111, 153, 125);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #11245a;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #11245a !important;
+}
+
+.navbar {
+  background-color: rgb(245, 169, 7);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--oragne);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: white;
+  background-color: var(--oragne-light);
+}
+
+/* .navbar .nav-link.active :hover{
+    background-color: blue;
+    color: red;
+} */
+
+#home {
+  background: linear-gradient(rgba(118, 52, 0, 0.7), rgba(118, 52, 0, 0.7)),
+    url(../images/fotka2.jfif);
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+#home h1,
+h2,
+h3,
+h4,
+p {
+  color: white;
+}
+
+#home h4 {
+  color: white;
+}
+
+#home p {
+  color: white;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-intro .hline {
+  width: 70px;
+  height: 2px;
+  background-color: red;
+  margin: 16px auto 0 auto;
+}
+
+#offers h1,
+h2,
+h3,
+h4,
+p {
+  color: black;
+  letter-spacing: 2px;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border: 3px solid;
+  background-color: rgb(245, 169, 7);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.test {
+  border: 5px solid black;
+}
+
+.portfolio-item {
+  width: auto;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* zarówno napis i overlay ładują się dłużej */
+.portfolio-item img,
+.portfolio-item .portfolio-overlay {
+  transition: all 0.5s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 169, 7, 0.7);
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  /* widoczność overlay na porfolio item */
+  opacity: 0.7;
+}
+
+.portfolio-overlay h3,
+.portfolio-overlay h6 {
+  color: rgb(118, 52, 0);
+}
+
+/* widoczność po najechaniu */
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+body {
+  position: relative;
+}
+
+footer {
+  background-color: var(--oragne-light);
+  border-top: 1.3px solid black;
+  padding: 20px;
+}
+
+footer .footer-links a,
+footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+footer .footer-links a:hover,
+footer .social-icons a:hover {
+  color: goldenrod;
+}
+
+footer .social-icons {
+  font-size: 25px;
+}
+
+.footer-top {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid var(--brown);
+}
+
+footer .footer-links a {
+  display: block;
+  font-weight: 400;
 }

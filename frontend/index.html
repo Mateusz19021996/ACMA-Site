@@ -1,26 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d852418dc8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
     <title>Single page for ACMA</title>
-</head>
-<body>
-    <header>
-      test page
-        <nav class="navbarek">
-            <ul>
-                <a href="/" data-link>Home</a>
-                <a href="/about" data-link>About</a>
-                <!-- <a href="/posts" data-link>Posts</a> -->
-            </ul>
-        </nav> 
-    </header>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="#">ACMA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#offers">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#offers2">Offers2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <div id="spaApp"></div>
+    <section id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1 class="display-5">ACMA ASSISTANCE BROKER CONSULTING</h1>
+            <h4>Magdalena Litwin</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="/static/js/script.js"></script>
-</body>
+    <section id="offers">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 section-intro">
+            <h1>Our Services</h1>
+            <div class="hline"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 p-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <h4>Majątkowe</h4>
+            <p>Ubezpieczenia majątkowe</p>
+          </div>
+          <div class="col-lg-3 col-sm-6 p-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <h4>Majątkowe</h4>
+            <p>Ubezpieczenia majątkowe</p>
+          </div>
+          <div class="col-lg-3 col-sm-6 p-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <h4>Majątkowe</h4>
+            <p>Ubezpieczenia majątkowe</p>
+          </div>
+          <div class="col-lg-3 col-sm-6 p-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <h4>Majątkowe</h4>
+            <p>Ubezpieczenia majątkowe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers2" class="row g-0">
+      <div class="col-12 section-intro">
+        <h1>Our Services</h1>
+        <div class="hline"></div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <img src="./static/images/fotka2.jfif" alt="" />
+          <div class="portfolio-overlay">
+            <div>
+              <h3>Project title</h3>
+              <h6>Project subtite</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <img src="./static/images/fotka2.jfif" alt="" />
+          <div class="portfolio-overlay">
+            <div>
+              <h3>Project title</h3>
+              <h6>Project subtite</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <img src="./static/images/fotka2.jfif" alt="" />
+          <div class="portfolio-overlay">
+            <div>
+              <h3>Project title</h3>
+              <h6>Project subtite</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <img src="./static/images/fotka2.jfif" alt="" />
+          <div class="portfolio-overlay">
+            <div>
+              <h3>Project title</h3>
+              <h6>Project subtite</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <img src="./static/images/fotka2.jfif" alt="" />
+          <div class="portfolio-overlay">
+            <div>
+              <h3>Project title</h3>
+              <h6>Project subtite</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <img src="./static/images/fotka2.jfif" alt="" />
+          <div class="portfolio-overlay">
+            <div>
+              <h3>Project title</h3>
+              <h6>Project subtite</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top>">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4 class="logo-text">ACMA PAGE</h4>
+              <p>
+                To jest przykład To jest przykład To jest przykład To jest
+                przykład To jest przykład
+              </p>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5 class="title-sm">Navigation</h5>
+              <div class="footer-links">
+                <a href="#">Opcja1</a>
+                <a href="#">Opcja2</a>
+                <a href="#">Opcja3</a>
+                <a href="#">Opcja4</a>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5 class="title-sm">Policy</h5>
+              <div class="footer-links">
+                <a href="#">Rights</a>
+                <a href="#">Licences</a>
+                <a href="#">Options</a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <h5 class="title-sm">Contact</h5>
+              <div class="footer-links">
+                <p class="mb">Wrocław ulica numer</p>
+                <p>Wrocław ulica numer</p>
+                <a href="#">Opcja3</a>
+                <a href="#">Opcja4</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-md-6">
+              <p class="mb-0">All rights reserved</p>
+            </div>
+            <div class="col-auto">
+              <p class="mb-0">Created by Mateusz Kaleta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="static/js/script.js"></script>
+  </body>
 </html>
