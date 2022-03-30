@@ -7,4 +7,3 @@ export default class extends abstractView {
     this.setPath("/static/html/about.html");
   }
 }
-//xd
