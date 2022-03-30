@@ -6,6 +6,7 @@ console.log("this is mój js");
 //this function saves url to history when its called
 const navigateTo = (url) => {
   history.pushState(null, null, url);
+  //mozna to tu zrobic troszke lepiej przekazując konkretny element do routera
   router();
 };
 
@@ -19,6 +20,7 @@ const router = async () => {
     { path: "/posts", view: () => console.log("to jest dla postów") },
   ];
 
+  //potencialMatches zawiera listę elementów {route, isMatch}
   const potentialMatches = routes.map((route) => {
     return {
       route: route,
@@ -26,8 +28,12 @@ const router = async () => {
     };
   });
 
+  // tylko jedna ścieżka zawsze będzie wpisana w url i match wlaśnie ten
+  //element match zawsze wybierze z routs (konkrentiej z potencialMatches
+  // ale on też szuka w routs)
   let match = potentialMatches.find((potencialMatch) => potencialMatch.isMatch);
 
+  //sprawdzamy bo ktos w url mogl dac www.<nasz-adres>.sjufasidf.pl
   if (!match) {
     match = {
       route: routes[0],
@@ -36,6 +42,8 @@ const router = async () => {
   }
 
   //instance of view
+  //tutaj tworzymy nowy widok naszego konkretnego matcha, mamy w tablicy
+  //routes coś ala dictionary  (na c#) z key i delegatem
   const view = new match.route.view();
   console.log(view, "a to tu to jest nasz view ze scirpta.jssa");
 
@@ -44,6 +52,7 @@ const router = async () => {
   //console.log(match, 'to jest match');
   //console.log(match.route.view());
 
+  //elegacnko wrzucamy sobie nasz widok skonwerotwany na text do konkretnego diva
   document.querySelector("#spaApp").innerHTML = await view.getHTML();
 };
 
